@@ -506,7 +506,7 @@ void acaoBoss() {
     }
 
 
-    // ataque de área do boss
+    
     for (i = jogadorL - 1; i <= jogadorL + 1; i++) {
 
         for (j = jogadorC - 1; j <= jogadorC + 1; j++) {
@@ -526,7 +526,7 @@ void acaoBoss() {
     }
 
 
-    // boss cria espinhos
+    
     if (mapa[jogadorL][jogadorC + 1] == ' ') {
 
         mapa[jogadorL][jogadorC + 1] = '#';
