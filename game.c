@@ -321,20 +321,20 @@ void interagir() {
     }
 }
 
-void int atacarCelula(int l, int c) {
+ void atacarCelula(int l, int c) {
     if (l < 0 || l >= linhas || c < 0 || c >= colunas) {
-        return 0;
+        return;
     }
 
     if (mapa[l][c] == 'k') {
         mapa[l][c] = ' ';
         printf("\nVoce destruiu uma caixa!\n");
-        return 1;
+        return;
     } 
     else if (mapa[l][c] == 'X' || mapa[l][c] == 'Y') {
         mapa[l][c] = ' ';
         printf("\nVoce derrotou um monstro!\n");
-        return 1;
+        return;
     } 
     else if (mapa[l][c] == 'Z') {
         bossVida--;
@@ -345,9 +345,8 @@ void int atacarCelula(int l, int c) {
             venceu = 1;
         }
 
-        return 1;
+        return;
     }
-return 0;
 }
     
 
@@ -496,7 +495,6 @@ void moverMonstros() {
 void acaoBoss() {
     int i, j;
 
-   
     if (fase != 3) {
         return;
     }
@@ -505,32 +503,20 @@ void acaoBoss() {
         return;
     }
 
-
-    
     for (i = jogadorL - 1; i <= jogadorL + 1; i++) {
-
         for (j = jogadorC - 1; j <= jogadorC + 1; j++) {
-
             if (i >= 0 && i < linhas && j >= 0 && j < colunas) {
-
                 if (mapa[i][j] == 'Z') {
-
                     printf("\nO boss usou uma onda de energia!\n");
-
                     reiniciarFase();
-
                     return;
                 }
             }
         }
     }
 
-
-    
     if (mapa[jogadorL][jogadorC + 1] == ' ') {
-
         mapa[jogadorL][jogadorC + 1] = '#';
-
     }
 }
 
