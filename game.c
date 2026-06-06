@@ -94,8 +94,8 @@ void carregarAndar2() {
         "*      k      *",
         "*   ***** *** *",
         "*        #    *",
-        "*  X       @  *",
-        "*      D    L *",
+        "*  X          *",
+        "*           L *",
         "***************"
     };
 
@@ -496,20 +496,43 @@ void moverMonstros() {
 void acaoBoss() {
     int i, j;
 
-    if (fase != 3) return;
-    if (bossVida <= 0) return;
+    // boss só funciona no terceiro andar
+    if (fase != 3) {
+        return;
+    }
 
+    if (bossVida <= 0) {
+        return;
+    }
+
+
+    // ataque de área do boss
     for (i = jogadorL - 1; i <= jogadorL + 1; i++) {
+
         for (j = jogadorC - 1; j <= jogadorC + 1; j++) {
+
             if (i >= 0 && i < linhas && j >= 0 && j < colunas) {
+
                 if (mapa[i][j] == 'Z') {
+
                     printf("\nO boss usou uma onda de energia!\n");
+
                     reiniciarFase();
+
                     return;
                 }
             }
         }
     }
+
+
+    // boss cria espinhos
+    if (mapa[jogadorL][jogadorC + 1] == ' ') {
+
+        mapa[jogadorL][jogadorC + 1] = '#';
+
+    }
+}
 
     if (mapa[jogadorL][jogadorC + 1] == ' ') {
         mapa[jogadorL][jogadorC + 1] = '#';
