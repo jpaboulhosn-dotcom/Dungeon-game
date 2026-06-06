@@ -321,14 +321,22 @@ void interagir() {
     }
 }
 
-void atacarCelula(int l, int c) {
-    if (l < 0 || l >= linhas || c < 0 || c >= colunas) return;
+void int atacarCelula(int l, int c) {
+    if (l < 0 || l >= linhas || c < 0 || c >= colunas) {
+        return 0;
+    }
 
     if (mapa[l][c] == 'k') {
         mapa[l][c] = ' ';
-    } else if (mapa[l][c] == 'X' || mapa[l][c] == 'Y') {
+        printf("\nVoce destruiu uma caixa!\n");
+        return 1;
+    } 
+    else if (mapa[l][c] == 'X' || mapa[l][c] == 'Y') {
         mapa[l][c] = ' ';
-    } else if (mapa[l][c] == 'Z') {
+        printf("\nVoce derrotou um monstro!\n");
+        return 1;
+    } 
+    else if (mapa[l][c] == 'Z') {
         bossVida--;
         printf("\nVoce acertou o boss!\n");
 
@@ -336,8 +344,12 @@ void atacarCelula(int l, int c) {
             mapa[l][c] = ' ';
             venceu = 1;
         }
+
+        return 1;
     }
+return 0;
 }
+    
 
 void ataqueEspada() {
     int i;
@@ -391,16 +403,27 @@ void ataqueCajado() {
 void atacar() {
     if (arma == 0) {
         printf("\nVoce ainda nao escolheu uma arma!\n");
+        printf("Aperte ENTER para continuar...");
         getchar();
         getchar();
         return;
     }
 
-    if (arma == 1) ataqueEspada();
-    else if (arma == 2) ataqueArco();
-    else if (arma == 3) ataqueCajado();
-
     printf("\nAtaque realizado!\n");
+
+    if (arma == 1) {
+        ataqueEspada();
+    } 
+    else if (arma == 2) {
+        ataqueArco();
+    } 
+    else if (arma == 3) {
+        ataqueCajado();
+    }
+
+    printf("\nAperte ENTER para continuar...");
+    getchar();
+    getchar();
 }
 
 void moverMonstros() {
