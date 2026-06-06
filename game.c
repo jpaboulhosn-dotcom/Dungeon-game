@@ -496,7 +496,7 @@ void moverMonstros() {
 void acaoBoss() {
     int i, j;
 
-    // boss só funciona no terceiro andar
+   
     if (fase != 3) {
         return;
     }
