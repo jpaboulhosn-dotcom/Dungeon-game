@@ -400,17 +400,7 @@ void atacar() {
     else if (arma == 2) ataqueArco();
     else if (arma == 3) ataqueCajado();
 
-    getchar();
-    getchar();
-}
-
-int posicaoLivreMonstro(int l, int c) {
-    if (l < 0 || l >= linhas || c < 0 || c >= colunas) return 0;
-
-    if (l == jogadorL && c == jogadorC) return 1;
-
-    if (mapa[l][c] == ' ') return 1;
-    return 0;
+    printf("\nAtaque realizado!\n");
 }
 
 void moverMonstros() {
@@ -612,7 +602,7 @@ int main() {
             tutorial();
         } else if (opcao == 3) {
             printf("\nCreditos:\n");
-            printf("Desenvolvido por: Adib Hosn\n");
+            printf("Desenvolvido por: Joao Paulo Hosn\n");
             printf("Obrigado por jogar!\n");
         } else {
             printf("\nOpcao invalida!\n");
