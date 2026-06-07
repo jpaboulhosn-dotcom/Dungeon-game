@@ -107,28 +107,28 @@ void carregarAndar2() {
 void carregarAndar3() {
     char andar[MAX][MAX] = {
         "*************************",
-        "*P@     *       #   L  *",
+        "*P@     *       #   L   *",
         "* ***    *   *******    *",
         "*   k    D      Y       *",
-        "* *****  ***********    *",
+        "*******  ***********    *",
         "*     O         #       *",
         "*  #       X      k     *",
-        "* ***D************ **   *",
+        "*****D************ ******",
         "*   @          Y        *",
         "*       k  ********     *",
-        "*   *****       #       *",
-        "*        #   X          *",
-        "*  X       @      ***   *",
-        "*      D       Z        *",
-        "* ***********   *****   *",
+        "**********       #  *****",
+        "*        #   X   #      *",
+        "*  X       @       ******",
+        "*      D                *",
+        "*************   *****   *",
         "*    #       O          *",
         "*  ****** ******* **    *",
         "*      Y       @        *",
         "*  k       #      D     *",
-        "* ***************       *",
+        "*    ****************** *",
         "*       X               *",
-        "*   ************        *",
-        "*   #       Y           *",
+        "******************      *",
+        "*   #       Y      Z    *",
         "*                       *",
         "*************************"
     };
@@ -494,6 +494,8 @@ void moverMonstros() {
 
 void acaoBoss() {
     int i, j;
+    int linhaEspinho;
+    int colunaEspinho;
 
     if (fase != 3) {
         return;
@@ -503,25 +505,37 @@ void acaoBoss() {
         return;
     }
 
+
+    
     for (i = jogadorL - 1; i <= jogadorL + 1; i++) {
+
         for (j = jogadorC - 1; j <= jogadorC + 1; j++) {
+
             if (i >= 0 && i < linhas && j >= 0 && j < colunas) {
+
                 if (mapa[i][j] == 'Z') {
-                    printf("\nO boss usou uma onda de energia!\n");
+
+                    printf("\nO Boss usou uma onda de energia!\n");
+
                     reiniciarFase();
+
                     return;
                 }
             }
         }
     }
 
-    if (mapa[jogadorL][jogadorC + 1] == ' ') {
-        mapa[jogadorL][jogadorC + 1] = '#';
-    }
-}
 
-    if (mapa[jogadorL][jogadorC + 1] == ' ') {
-        mapa[jogadorL][jogadorC + 1] = '#';
+    
+    linhaEspinho = rand() % linhas;
+    colunaEspinho = rand() % colunas;
+
+
+    if (mapa[linhaEspinho][colunaEspinho] == ' ') {
+
+        mapa[linhaEspinho][colunaEspinho] = '#';
+
+        printf("\nO Boss espalhou a escuridao pelo mapa!\n");
     }
 }
 
