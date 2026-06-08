@@ -201,14 +201,25 @@ int podeAndar(char c) {
     return 1;
 }
 
-void posicaoFrente(int *l, int *c) {
-    *l = jogadorL;
-    *c = jogadorC;
+int frenteL;
+int frenteC;
 
-    if (direcao == '^') (*l)--;
-    else if (direcao == 'v') (*l)++;
-    else if (direcao == '<') (*c)--;
-    else if (direcao == '>') (*c)++;
+void posicaoFrente() {
+    frenteL = jogadorL;
+    frenteC = jogadorC;
+
+    if (direcao == '^') {
+        frenteL--;
+    }
+    else if (direcao == 'v') {
+        frenteL++;
+    }
+    else if (direcao == '<') {
+        frenteC--;
+    }
+    else if (direcao == '>') {
+        frenteC++;
+    }
 }
 
 void moverJogador(char comando) {
@@ -288,24 +299,23 @@ void acionarBotao() {
 }
 
 void interagir() {
-    int l, c;
     char obj;
 
-    posicaoFrente(&l, &c);
-    obj = mapa[l][c];
+    posicaoFrente();
+    obj = mapa[frenteL][frenteC];
 
     if (obj == 'N') {
         escolherArma();
     } else if (obj == '@') {
         chaves++;
-        mapa[l][c] = ' ';
+        mapa[frenteL][frenteC] = ' ';
         printf("\nVoce pegou uma chave!\n");
         getchar();
         getchar();
     } else if (obj == 'D') {
         if (chaves > 0) {
             chaves--;
-            mapa[l][c] = '=';
+            mapa[frenteL][frenteC] = '=';
             printf("\nVoce abriu a porta!\n");
         } else {
             printf("\nVoce precisa de uma chave!\n");
