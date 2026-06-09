@@ -1,6 +1,6 @@
-# 🏰 Dungeon of Shadows
+#  Dungeon of Shadows
 
-## 🎮 Sobre o Projeto
+##  Sobre o Projeto
 
 **Dungeon of Shadows** é um jogo do gênero **Dungeon Crawler** desenvolvido em linguagem **C**, utilizando o console como forma principal de interação.
 
@@ -18,7 +18,7 @@ Este projeto foi desenvolvido como trabalho acadêmico da disciplina de programa
 
 ---
 
-# 👨‍💻 Desenvolvedor
+#  Desenvolvedor
 
 **João Paulo Cavaleiro de Macêdo Aboul Hosn**
 
@@ -27,7 +27,7 @@ Linguagem utilizada: C
 
 ---
 
-# 📖 História do Jogo
+#  História do Jogo
 
 Durante muitos anos, uma pequena vila viveu em paz, protegida por antigos guerreiros que mantinham uma força sombria presa dentro de uma masmorra esquecida.
 
@@ -35,13 +35,13 @@ Porém, o selo que prendia essa energia começou a enfraquecer. Criaturas mister
 
 Agora, um novo aventureiro surge com uma missão:
 
-⚔️ **Entrar na masmorra, superar todos os desafios e derrotar o Boss Final antes que a escuridão alcance a vila.**
+ **Entrar na masmorra, superar todos os desafios e derrotar o Boss Final antes que a escuridão alcance a vila.**
 
 Antes da jornada começar, o jogador deverá conversar com um morador da vila para escolher uma arma que será utilizada durante toda a aventura.
 
 ---
 
-# 🕹️ Como Jogar
+#  Como Jogar
 
 O jogador controla um personagem dentro de mapas formados por caracteres no terminal.
 
@@ -58,7 +58,7 @@ O objetivo é:
 
 O jogador começa com:
 
-❤️ **3 vidas**
+ **3 vidas**
 
 Caso encoste em espinhos ou seja atingido por monstros:
 
@@ -67,11 +67,11 @@ Caso encoste em espinhos ou seja atingido por monstros:
 
 Ao perder todas as vidas:
 
-💀 **Game Over**
+ **Game Over**
 
 ---
 
-# 🎮 Controles
+#  Controles
 
 | Tecla | Ação                 |
 | ----- | -------------------- |
@@ -94,13 +94,13 @@ O símbolo do jogador muda dependendo da direção:
 
 ---
 
-# ⚔️ Sistema de Armas
+#  Sistema de Armas
 
 Durante a exploração da vila, o jogador encontra um NPC responsável por entregar uma arma.
 
 Existem três opções:
 
-## ⚔️ Espada
+##  Espada
 
 Ataque de curta distância.
 
@@ -114,7 +114,7 @@ zzz
 
 ---
 
-## 🏹 Arco e Flecha
+##  Arco e Flecha
 
 Ataque de longo alcance.
 
@@ -126,7 +126,7 @@ Atinge quatro espaços em linha reta.
 
 ---
 
-## 🪄 Cajado
+##  Cajado
 
 Ataque mágico ao redor do jogador.
 
@@ -140,7 +140,7 @@ z z z
 
 ---
 
-# 🗺️ Símbolos do Mapa
+#  Símbolos do Mapa
 
 | Símbolo | Significado                   |
 | ------- | ----------------------------- |
@@ -163,7 +163,7 @@ z z z
 
 ---
 
-# 👾 Inimigos
+#  Inimigos
 
 ## Monstro Tipo 1 — X
 
@@ -203,7 +203,7 @@ Somente derrotando o Boss a vila será salva.
 
 ---
 
-# 🏘️ Áreas do Jogo
+#  Áreas do Jogo
 
 ## Vila
 
@@ -247,7 +247,7 @@ Desafio final contendo:
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+#  Tecnologias Utilizadas
 
  Linguagem C
  Terminal/Console
@@ -255,7 +255,7 @@ Desafio final contendo:
 
 ---
 
-# ▶️ Como Executar
+#  Como Executar
 
 Clone o repositório:
 
@@ -277,7 +277,7 @@ Execute:
 
 ---
 
-# 🏆 Objetivo do Projeto
+#  Objetivo do Projeto
 
 Criar um jogo completo utilizando apenas recursos fundamentais da linguagem C, demonstrando domínio da lógica de programação e organização de código.
 
@@ -333,4 +333,4 @@ Aprendi que o for repete o printf("\n") várias vezes para criar linhas vazias e
 
 
 
-## Obrigado por jogar Dungeon of Shadows! 🏰⚔️
+## Obrigado por jogar Dungeon of Shadows! 
