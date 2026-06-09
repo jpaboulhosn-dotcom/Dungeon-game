@@ -281,6 +281,54 @@ Execute:
 
 Criar um jogo completo utilizando apenas recursos fundamentais da linguagem C, demonstrando domínio da lógica de programação e organização de código.
 
+---
+
+
+# Uso do ChatGPT durante o desenvolvimento do projeto
+
+Durante o desenvolvimento do jogo **Dungeon Crawler em C**, utilizei o ChatGPT como uma ferramenta de apoio para entender melhor algumas partes do meu próprio código, melhorar a organização da lógica e esclarecer dúvidas sobre conceitos da linguagem C.
+
+O ChatGPT não foi utilizado apenas para gerar código pronto, mas principalmente para explicar conceitos, revisar trechos específicos e auxiliar na compreensão da lógica utilizada no projeto.
+
+## 1. Manipulação do mapa usando matrizes
+
+Utilizei o ChatGPT para entender melhor a lógica da função responsável por copiar os mapas das fases: 
+
+mapa[i][j]=origem[i][j]
+
+2. Controle da posição do jogador
+
+Também utilizei o ChatGPT para entender por que o jogador era removido da matriz após carregar a fase:
+
+if (mapa[i][j] == 'P') {
+    jogadorL = i;
+    jogadorC = j;
+    mapa[i][j] = ' ';
+}
+
+Aprendi que o caractere P serve apenas para indicar a posição inicial do jogador.
+
+Depois disso, sua localização passa a ser controlada pelas variáveis:
+
+jogadorL
+jogadorC
+
+Isso facilita a movimentação, pois o programa não precisa alterar constantemente a matriz para mover o personagem.
+
+3. Limpeza da tela do terminal
+
+Utilizei o ChatGPT para compreender o funcionamento da função:
+
+void limparTela() {
+    int i;
+    
+   for(i = 0;i < 30; i++) {
+    printf("\n");
+     }
+}
+    
+Aprendi que o for repete o printf("\n") várias vezes para criar linhas vazias e simular uma limpeza de tela antes do mapa ser desenhado novamente.
+
 
 
 
